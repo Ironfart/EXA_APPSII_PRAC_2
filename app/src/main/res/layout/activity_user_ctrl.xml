@@ -78,14 +78,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nuevo" />
+            android:text="Nuevo"
+            android:onClick="onNewUser" />
 
         <Button
             android:id="@+id/btnSaveUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Guardar" />
+            android:text="Guardar"
+            android:onClick="onDBSave" />
 
         <Button
             android:id="@+id/btnOpenUser"
@@ -93,13 +95,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Abrir"
-            android:onClick="onUserList"/>
+            android:onClick="onUserList" />
 
         <Button
             android:id="@+id/btnDelUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Borrar" />
+            android:text="Borrar"
+            android:onClick="onDBDelete" />
     </LinearLayout>
 </LinearLayout>

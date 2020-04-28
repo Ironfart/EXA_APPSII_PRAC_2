@@ -21,7 +21,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        db = this.openOrCreateDatabase("usersDB", MODE_PRIVATE, null);
 
+        db.execSQL("create table if not exists users ("
+                + " recID integer PRIMARY KEY autoincrement, "
+                + " name text, "
+                + " lastname text, "
+                + " username text unique, "
+                + " password text ); " );
     }
 
     public void onUserCtrl(View v) {

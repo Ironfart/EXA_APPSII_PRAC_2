@@ -11,11 +11,18 @@ public class User {
         id = 1;
         name = "Diego";
         lastN = "Rodríguez";
-        username = "diegrod";
+        username = "diegorod";
         pass = "1234";
     }
 
-    public User(int id, String name, String lastN ,String username, String pass) {
+    public User(int id, String name, String lastN, String username) {
+        this.id = id;
+        this.name = name;
+        this.lastN = lastN;
+        this.username = username;
+    }
+
+    public User(int id, String name, String lastN, String username, String pass) {
         this.id = id;
         this.name = name;
         this.lastN = lastN;
