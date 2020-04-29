@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     final Context context = this;
 
-    Intent inFileCtrl, inUserCtrl;
+    Intent inUserCtrl, inFileLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 + " lastname text, "
                 + " username text unique, "
                 + " password text ); " );
+
+        db.execSQL("create table if not exists files ("
+                + " recID integer PRIMARY KEY autoincrement, "
+                + " filename text unique, "
+                + " userID int ); " );
+
+        //db.execSQL("drop table  files");
     }
 
     public void onUserCtrl(View v) {
@@ -37,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onFileCtrl(View v) {
-        inFileCtrl = new Intent(this, FileCtrlActivity.class);
-        startActivity(inFileCtrl);
+        inFileLogin = new Intent(this, FileLoginActivity.class);
+        startActivity(inFileLogin);
     }
 
     public void onExit(View v) {
